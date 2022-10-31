@@ -1,3 +1,20 @@
+.env
+
+#TypeORM
+TYPEORM_CONNECTION= "mysql"
+TYPEORM_HOST= localhost
+TYPEORM_USERNAME= avanade_api
+TYPEORM_PASSWORD= 2RH6JgWGH$
+TYPEORM_DATABASE= avanade_fiap_out22
+TYPEORM_PORT= 3306
+TYPEORM_ENTITIES= typeorm/**/*.entity{.ts,.js}
+TYPEORM_MIGRATIONS_DIR= "typeorm/migration"
+TYPEORM_MIGRATIONS= "typeorm/migration/**/*.ts"
+TYPEORM_MIGRATIONS_RUN= true
+TYPEORM_SYNCHRONIZE= true
+TYPEORM_LOGGING= false
+
+
 # compiled output
 /dist
 /node_modules

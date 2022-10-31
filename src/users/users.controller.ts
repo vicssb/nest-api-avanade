@@ -19,12 +19,12 @@ export class UsersController {
     }
 
     @Get(':id')
-    findOne(@Param('id', ParseUUIDPipe) id: number){
+    findOne(@Param('id', ParseIntPipe) id: number){
         return this.usersService.findOne(id);
     }
 
     @Patch(':id')
-    update(@Param('id', ParseUUIDPipe) id: number, @Body() req: UpadateUserDTO){
+    update(@Param('id', ParseIntPipe) id: number, @Body() req: UpadateUserDTO){
         return this.usersService.update(id, req);
     }
 }
