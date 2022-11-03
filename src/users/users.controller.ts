@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Param, ParseIntPipe, ParseUUIDPipe, Patch, Post } from '@nestjs/common';
 import { CreateUserDTO } from './dto/createUser.dto';
-import { UpadateUserDTO } from './dto/updateUser.dto';
+import { UpdateUserDTO } from './dto/updateUser.dto';
 import { UsersService } from './users.service';
 
 @Controller('users')
@@ -24,7 +24,7 @@ export class UsersController {
     }
 
     @Patch(':id')
-    update(@Param('id', ParseIntPipe) id: number, @Body() req: UpadateUserDTO){
+    update(@Param('id', ParseIntPipe) id: number, @Body() req: UpdateUserDTO){
         return this.usersService.update(id, req);
     }
 }
